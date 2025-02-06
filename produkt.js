@@ -13,8 +13,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productID}`)
         <h3>Model name:</h3>
         <p><strong>Product Display Name:</strong> ${data.productdisplayname}</p>
         <h3>Color</h3>
-        <p><strong>Colour:</strong> ${data.color1}</p>
+        <p><strong>Color:</strong> ${data.basecolour}</p>
+        <p><stroing>Price:</strong> ${data.price},-</p>
         <p class="basket">Add to basket</p>
+        <p class="udsolgt ${data.soldtout && "soldOut"}">Udsolgt</p>
+        <p class="tilbud ${data.discount && "isOnSale"}">-${data.discount}%</p>
+        <p class="nypris ${data.discount && "isOnSale"}"> ${data.price - (data.price / 100) * data.discount},- new price</p>
       </div>
     `;
   });

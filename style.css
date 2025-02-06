@@ -10,6 +10,13 @@ img {
   display: block;
   padding: 0px;
 }
+body {
+  margin-top: 5px;
+  padding: 10px;
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 header {
   display: flex;
@@ -21,6 +28,7 @@ header {
 a {
   text-decoration: none;
   color: brown;
+  font-size: 2.5rem;
 }
 h2 {
   font-size: 50px;
@@ -55,6 +63,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
+  margin: 119px auto;
 }
 .category_box {
   background-color: blanchedalmond;
@@ -95,14 +104,14 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.product_card:hover img {
+/* .product_card:hover img {
   transform: scale(1.05);
 }
 
 .product_card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .product_description {
   font-size: 1rem;
@@ -134,17 +143,61 @@ footer {
   background-color: black;
   color: #ffffff;
   border: 5px;
-  padding: 18px 35px;
+  padding: 10px 25px;
   font-size: 1.3rem;
   border-radius: 10px;
+  padding-bottom: 5px;
 }
 h3 {
   margin-top: 36px;
+  color: brown;
+  margin: 10px;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: brown;
+}
+p {
+  color: black;
+  font-weight: 50;
+  margin: 10px;
+}
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.info {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #eeedeb;
+  border-radius: 2px;
+  padding: 24px;
+}
+.tilbud {
+  visibility: hidden;
+  color: red;
+  border: none;
+  background-color: blanchedalmond;
+  margin-top: 5px;
+}
+
+.nypris {
+  visibility: hidden;
+}
+.udsolgt {
+  visibility: hidden;
+  color: blue;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.soldOut {
+  visibility: visible;
 }
 /* kun desktop */
 @media (min-width: 800px) {
@@ -154,7 +207,7 @@ a {
   .category_grid {
     grid-template-columns: repeat(3, minmax);
     max-width: 500px;
-    margin: 0 auto;
+    margin: 119px auto;
   }
   .category_box {
     width: 150px;
@@ -176,16 +229,26 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 60px;
-    margin-top: 80px;
+    margin: 80px;
+  }
+  .product img {
+    width: 68%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.2s ease;
   }
   .basket {
     background-color: black;
     color: #ffffff;
     border: 5px;
-    padding: 10px 20px;
-    /* font-size: 1.3rem; */
+    padding: 10px;
   }
   .info {
-    margin-top: 78px;
+    margin-top: 0px;
+    border: none;
+    background-color: #eeedeb;
+    color: brown;
+    border-radius: 2px;
+    padding: 24px;
   }
 }
